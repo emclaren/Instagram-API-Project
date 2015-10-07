@@ -1,0 +1,19 @@
+{
+  "name": "project3",
+  "version": "1.0.0",
+  "description": "project3",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emclaren/project3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emclaren/project3/issues"
+  },
+  "homepage": "https://github.com/emclaren/project3#readme"
+}
