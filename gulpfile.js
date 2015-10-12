@@ -1,64 +1,30 @@
-var gulp = require('gulp');
-var uglify =require('gulp-uglify');
-var concat = require('gulp-concat');
-var connect= require('gulp-connect');
+var gulp = require('gulp'); // Load Gulp!
+var browserSync = require('browser-sync').create();
+var sass = require('gulp-sass');
 
 
-  // place code for your default task here
-gulp.task('compress-js', function() {
-	gulp.src('js/*.js')
-	.pipe(concat('main.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('build/js'));
 
-});
-
-
-gulp.task('watch', function(){
-	gulp.watch(['js/*js'], ['compress-js']);
-
-});
-
-
-gulp.task('connect', function(){
-	connect.server();
+ 
+gulp.task('scss', function () {
+  gulp.src('./scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./css'));
 });
 
 
 
 
+gulp.task('browser-sync', function() {
+   browserSync.init({
+       server: {
+           baseDir: "./"
+       }
+   });
 
-	// gulp.watch(['css/*css']), ['compress-css']);
-// gulp.task('default', ['compress-js', 'watch']);
-
-
-
-
-
-
-// gulp.task('compress-css', function(){
-// 	gulp.src('*.css')
-// 	.pipe(concat('main.min.css'))
-// 	.pipe(uglify())
-// 	.pipe(gulp.dest('build/css'));
-// });
+	gulp.watch('./scss/**/*.scss',['scss']);
+    gulp.watch(["index.html", "js/*.js", "css/*.css"]).on('change', browserSync.reload);
+});
 
 
+//maybe chnage **/*.html to index/*.html
 
-// var browserSync = require('browser-sync').create();
-
-// // Static server
-// gulp.task('browser-sync', function() {
-//     browserSync.init({
-//         server: {
-//             baseDir: "./"
-//         }
-//     });
-// });
-
-// // or...
-
-// gulp.task('browser-sync', function() {
-//     browserSync.init({
-//         proxy: "yourlocal.dev"
-//     });

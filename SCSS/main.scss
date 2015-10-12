@@ -1,0 +1,151 @@
+@import"reset";
+@import "fonts";
+@import "variables";
+@import "mixin";
+
+
+
+body{
+	font-size: 16px;
+
+// 	@include bp(tablet) {
+// 		// background-color: orange;
+// 	} 
+// 	@include bp(desktop) {
+// 		// background-color: green;
+// 	}
+// }
+
+
+// }
+
+.search-frame{
+	background-color: white;
+	padding: 0%;
+	display: inline-block;
+	margin:0%;
+}
+button{
+	background-color: white;
+	display: inline-block;
+	border: none;
+}
+
+input{
+	border: none}
+
+
+
+// @if $point == breaksmall{
+// 	@media {
+// 		background-color:red;
+// }
+// @else if $point == breaklarge{
+// @media {
+// 		background-color:green;
+// }
+// }
+
+
+.logo{
+	width:25%;
+	padding:1%;
+}
+.search{
+background-color: purple;
+		background-image:url("../images/pattern.png");
+		text-align: center;
+
+}
+
+.search img{
+	width:15%;
+	margin: auto;
+	padding-top:10%;
+	padding-bottom: 5%;
+}
+
+.photo-search{
+	padding-bottom: 10%
+}
+
+.grid{
+	width: 97%;
+	margin: 1%;
+	border: 2px solid gray;
+}
+
+
+.grid2 {
+	width: 97%;
+	margin: 1%;
+	border: 1px solid gray;
+}
+
+
+
+.loadmore {
+	padding:0%;
+	padding:10px;
+	margin:auto;
+	text-align: center;
+	 margin-bottom:5%; 
+    margin-top: 5%;
+}
+
+}
+
+.button {
+	background-color:red;
+	width:200px;
+    height:auto;
+    margin:auto;
+	border:1px solid gray;
+	margin-bottom: 5%;
+ 
+    color: white;
+    text-align: center;
+    font-weight:bold;
+}
+
+footer{
+	text-align: center;
+	border-top: 1px solid gray;
+	margin-top: 20%
+
+}
+
+
+// .search { position: relative; }
+// .search input { text-indent: 30px;}
+// .search .fa-search { 
+//   position: absolute;
+//   top: 24px;
+//   left: 7px;
+//   font-size: 15px;
+// }
+// $tablet-width: 768px;
+// $desktop-width: 1024px;
+
+// @mixin tablet {
+//   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop {
+//   @media (min-width: #{$desktop-width}) {
+//     @content;
+//   }
+// }
+
+// .profile-pic {
+//   float: left;
+//   width: 250px;
+//   @media screen and (max-width: $break-small) {
+//     width: 100px;
+//     float: none;
+//   }
+ // USE MIXIN for media qyerues
+
+// font-size: breakpoint width: 

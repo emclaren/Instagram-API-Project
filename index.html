@@ -2,27 +2,65 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Instagrid</title>
-		
-		<!--CSS Reset-->
-		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style.css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/main.css">
 		<!--Styling for website-->
 		<script src="js/script.js"></script>
 			
    </head>
 <body>
 
+
+
 <div class="logo">
 	<img src="images/instagrid-logo.svg">
 </div>
 
+
+
 <div class="search">
 <img src="images/instagrid-icon.svg">
+
+
+<div class="search-widget">
+   <form action="#" id="search-form">
+      <div class="photo-search">
+      	<div class="search-frame">
+         <input type="text" name="search_words" id="search-words" placeholder="Enter your search" />
+         <button type="submit"> <i class="fa fa-search"></i> </button>
+      </div>
+  </div>
+   </form>
+
 </div>
+</div>
+
+
+
 
 <div class="grid">
+
 <img src="images/search-tags.svg">
+
+ <ul class="album-list"></ul>
+  <p class="user-name"> </p>
 </div>
 
+<!-- 
+<div class="loadmore">
+		<div class="button">
+		<a href="#menu" > 
+			Load More
+		</a> 
+	</div>
+</div>
+ -->
+
+
+
+<footer>
+	 &copy Copyright 2015 INSTAGRID 
+</footer>
 </body>
 </html>

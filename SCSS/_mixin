@@ -1,0 +1,25 @@
+
+// @mixin smallbreakpoint {
+// 	@media(min-width: #{$smallbreakpoint}) { @content; }
+// }
+
+// @mixin largebreakpoint {
+// 	@media(min-width: #{$largelbreakpoint}){ @content; }
+// }
+
+
+
+
+@mixin bp($point) {
+  
+  $bp-tablet: "(min-width: #{$smallbreakpoint})";
+  $bp-desktop: "(min-width: #{$largebreakpoint})";
+  
+
+  @if $point == desktop {
+    @media #{$bp-desktop} { @content; }
+  }
+  @else if $point == tablet {
+    @media #{$bp-tablet} { @content; }
+  }
+}
