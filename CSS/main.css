@@ -357,81 +357,147 @@ th {
 
 @font-face {
   font-family: 'open_sans';
-  src: url("opensans-bold-webfont.eot");
-  src: url("opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("opensans-bold-webfont.woff2") format("woff2"), url("opensans-bold-webfont.woff") format("woff"), url("opensans-bold-webfont.ttf") format("truetype"), url("opensans-bold-webfont.svg#open_sansbold") format("svg");
+  src: url("../fonts/opensans-bold-webfont.eot");
+  src: url("../fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-bold-webfont.woff2") format("woff2"), url("../fonts/opensans-bold-webfont.woff") format("woff"), url("../fonts/opensans-bold-webfont.ttf") format("truetype"), url("../fonts/opensans-bold-webfont.svg#open_sansbold") format("svg");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'open_sans';
-  src: url("opensans-bolditalic-webfont.eot");
-  src: url("opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("opensans-bolditalic-webfont.woff2") format("woff2"), url("opensans-bolditalic-webfont.woff") format("woff"), url("opensans-bolditalic-webfont.ttf") format("truetype"), url("opensans-bolditalic-webfont.svg#open_sansbold_italic") format("svg");
+  src: url("../fonts/opensans-bolditalic-webfont.eot");
+  src: url("../fonts/opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-bolditalic-webfont.woff2") format("woff2"), url("../fonts/opensans-bolditalic-webfont.woff") format("woff"), url("../fonts/opensans-bolditalic-webfont.ttf") format("truetype"), url("../fonts/opensans-bolditalic-webfont.svg#open_sansbold_italic") format("svg");
   font-weight: bold;
   font-style: italic; }
 
 @font-face {
   font-family: 'open_sans';
-  src: url("opensans-light-webfont.eot");
-  src: url("opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("opensans-light-webfont.woff2") format("woff2"), url("opensans-light-webfont.woff") format("woff"), url("opensans-light-webfont.ttf") format("truetype"), url("opensans-light-webfont.svg#open_sanslight") format("svg");
+  src: url("../fonts/opensans-light-webfont.eot");
+  src: url("../fonts/opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-light-webfont.woff2") format("woff2"), url("../fonts/opensans-light-webfont.woff") format("woff"), url("../fonts/opensans-light-webfont.ttf") format("truetype"), url("../fonts/opensans-light-webfont.svg#open_sanslight") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'open_sans';
-  src: url("opensans-lightitalic-webfont.eot");
-  src: url("opensans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("opensans-lightitalic-webfont.woff2") format("woff2"), url("opensans-lightitalic-webfont.woff") format("woff"), url("opensans-lightitalic-webfont.ttf") format("truetype"), url("opensans-lightitalic-webfont.svg#open_sanslight_italic") format("svg");
+  src: url("../fonts/opensans-lightitalic-webfont.eot");
+  src: url("../fonts/opensans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-lightitalic-webfont.woff2") format("woff2"), url("../fonts/opensans-lightitalic-webfont.woff") format("woff"), url("../fonts/opensans-lightitalic-webfont.ttf") format("truetype"), url("../fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic") format("svg");
   font-weight: normal;
   font-style: italic; }
 
 body {
-  font-size: 16px; }
-  body .search-frame {
-    background-color: white;
-    padding: 0%;
-    display: inline-block;
-    margin: 0%; }
-  body button {
-    background-color: white;
-    display: inline-block;
-    border: none; }
-  body input {
-    border: none; }
-  body .logo {
-    width: 25%;
-    padding: 1%; }
-  body .search {
-    background-color: purple;
-    background-image: url("../images/pattern.png");
-    text-align: center; }
-  body .search img {
-    width: 15%;
-    margin: auto;
-    padding-top: 10%;
-    padding-bottom: 5%; }
-  body .photo-search {
-    padding-bottom: 10%; }
-  body .grid {
-    width: 97%;
-    margin: 1%;
-    border: 2px solid gray; }
-  body .grid2 {
-    width: 97%;
-    margin: 1%;
-    border: 1px solid gray; }
-  body .loadmore {
-    padding: 0%;
-    padding: 10px;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 5%;
-    margin-top: 5%; }
+  font-size: 12px;
+  color: #2e2e2e;
+  font-family: "open_sans"; }
+
+.search-frame {
+  background-color: white;
+  padding: 0%;
+  display: inline-block;
+  margin: 0%; }
+
+button {
+  background-color: white;
+  display: inline-block;
+  border: none;
+  outline: none;
+  color: #dbdbdb; }
+
+input {
+  border: none;
+  outline: none; }
+
+ul {
+  list-style: none;
+  text-align: center;
+  margin: auto;
+  padding: 0%; }
+
+.picture img {
+  width: 100%; }
+
+.wrappertest {
+  border: 1px solid #dbdbdb;
+  padding-top: 0%;
+  margin: 2%; }
+  @media (min-width: 600px) {
+    .wrappertest {
+      width: 250px; } }
+  @media (min-width: 1000px) {
+    .wrappertest {
+      width: 200px; } }
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 1.5em; } }
+
+.profile {
+  display: flex;
+  justify-content: space-between; }
+
+.profile img {
+  max-width: 100%; }
+
+.wraptest1 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  overflow: hidden;
+  margin: 1rem;
+  text-align: left; }
+
+.wraptest2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  text-align: right;
+  padding-right: 1rem; }
+
+.likes {
+  flex-direction: row; }
+
+header {
+  width: 25%;
+  padding: 1%; }
+
+.search {
+  background-image: url("../images/pattern.png");
+  text-align: center; }
+
+.search img {
+  width: 15%;
+  margin: auto;
+  padding-top: 10%;
+  padding-bottom: 5%; }
+
+.photo-search {
+  padding-bottom: 10%; }
+
+.grid {
+  width: 97%;
+  margin: 1%;
+  border: 1px solid #c2c2c2; }
+
+@media (min-width: 600px) {
+  .photo-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around; } }
+
+.loadmore {
+  padding: 0%;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 5%;
+  margin-top: 5%; }
 
 .button {
   background-color: red;
   width: 200px;
   height: auto;
   margin: auto;
-  border: 1px solid gray;
+  border: 1px solid #2e2e2e;
   margin-bottom: 5%;
   color: white;
   text-align: center;
@@ -439,5 +505,5 @@ body {
 
 footer {
   text-align: center;
-  border-top: 1px solid gray;
+  border-top: 1px solid #2e2e2e;
   margin-top: 20%; }
