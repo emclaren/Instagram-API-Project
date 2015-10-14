@@ -39,11 +39,11 @@ $(function(){
                photoItems += '<li class="photo-container">';
                   photoItems += '<ul>';
                      photoItems += '<li class="main-image">';
-                     photoItems += '<a href="' + value.link + '"target="_blank"> <img src="' + value.images.standard_resolution.url+ '" />';
-                     photoItems += '</li></a>';  
+                     photoItems += '<a href="' + value.images.standard_resolution.url + '" data-lightbox="image-1" > <img src="' + value.images.standard_resolution.url+ '" /></a>';
+                     photoItems += '</li>';  
                      photoItems += '<li class="image-info">';
                      photoItems += '<div class="profile-photo">'; 
-                     photoItems += '<img src="' + value.user.profile_picture+ '" />';
+                     photoItems += '<a href="' + value.link + '"target="_blank"> <img src="' + value.user.profile_picture+ '" /></a>';
                      photoItems += '</div>'; 
                      photoItems += '<div class="username">'; 
                      photoItems += '<h1>' + value.user.username + '</h1>';
