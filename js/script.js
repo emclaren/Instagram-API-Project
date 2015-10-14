@@ -9,15 +9,10 @@ $(function(){
        $photoList = $('.photo-list');
 
 
-  $( document ).ajaxStart(function() {
-      $(".loading-gif").append('<img class="loader" src="images/ajax-loader.gif" alt="loading spinner">');
-});
-$( document ).ajaxStop(function() {
-   $(".loading-gif").remove(); });
-
    // when the form is submitted
    $('#search-form').on('submit', function(event) {
        event.preventDefault();
+       $('.loading-gif').css("display", "block")
 
       // reset all the things
       $photoList.empty();
@@ -44,8 +39,8 @@ $( document ).ajaxStop(function() {
                photoItems += '<li class="photo-container">';
                   photoItems += '<ul>';
                      photoItems += '<li class="main-image">';
-                     photoItems += '<img src="' + value.images.standard_resolution.url+ '" />';
-                     photoItems += '</li>';  
+                     photoItems += '<a href="' + value.link + '"target="_blank"> <img src="' + value.images.standard_resolution.url+ '" />';
+                     photoItems += '</li></a>';  
                      photoItems += '<li class="image-info">';
                      photoItems += '<div class="profile-photo">'; 
                      photoItems += '<img src="' + value.user.profile_picture+ '" />';
@@ -57,7 +52,6 @@ $( document ).ajaxStop(function() {
                      photoItems += '</div>';
                      photoItems += '</div>';
                      photoItems += '</li>';
- 
                   photoItems += '</ul>';
                photoItems += '</li>';
             });
@@ -69,9 +63,13 @@ $( document ).ajaxStop(function() {
       // and if it fails...
       .fail(function() {
          $photoList.append('<li>Sorry! There was a problem, please try again.</li>');
+      })
+      .always (function() {
+          $('.loading-gif').css("display", "none");
       });
-
+   
 
    });
+
 });
 
