@@ -67,9 +67,6 @@ $(function(){
       .always (function() {
           $('.loading-gif').css("display", "none");
       });
-   
-
    });
-
 });
 

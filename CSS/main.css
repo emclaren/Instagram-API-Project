@@ -393,6 +393,7 @@ header {
 /*Formatting for the Search portion of the page*/
 .search-container {
   background-image: url("../images/pattern.png");
+  background-size: cover;
   text-align: center; }
 
 .search-container img {

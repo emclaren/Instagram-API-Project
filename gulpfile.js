@@ -1,4 +1,5 @@
-var gulp = require('gulp'); // Load Gulp!
+
+var gulp = require('gulp'); 
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
@@ -21,7 +22,6 @@ gulp.task('browser-sync', function() {
            baseDir: "./"
        }
    });
-
 
 	gulp.watch('./scss/**/*.scss',['scss']);
     gulp.watch(["index.html", "js/*.js", "css/*.css"]).on('change', browserSync.reload);
