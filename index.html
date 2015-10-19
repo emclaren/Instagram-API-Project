@@ -22,36 +22,38 @@
 
 		<div class="search-container">
 			<img src="images/instagrid-icon.svg" alt="Camera Logo">
-			<form action="#" id="search-form">
+			<form method="get" ng-submit="getPhotos($event)" action="#" id="search-form">
 				<div class="photo-search">
 					<div class="search-input">
 						<input ng-model="hashtag" type="text" name="search_words" id="search-words" placeholder="Enter your search" />
-						 <button type="button" ng-click="getPhotos()"> <i class="fa fa-search"></i> </button>
+						 <button type="submit"> <i class="fa fa-search"></i> </button>
 					</div>
+
 				</div>
 			</form>
 		</div>
 
 		<div class="results-container">
-			<div class="loading-gif">
+
+			<div class="loading-gif" ng-show="loading">
 				<img class="loader" src="images/ajax-loader.gif" alt="loading spinner">
 			</div>
-			<img class="searchLogo" src="images/search-tags.svg" alt="Search # tags to view photos">
+			<img ng-hide="posts.length" class="searchLogo" src="images/search-tags.svg" alt="Search # tags to view photos">
 			<div class = "page-wrap">
     		<ul class="photo-list">
-    			<li class="photo-container">
+    			<li ng-repeat="post in posts" class="photo-container">
                 	<ul>
 	                    <li class="main-image">
-	                      	<a href=" " data-lightbox="image-1" > <img src="" /></a>
+	                      	<a href="{{post.images.standard_resolution.url}}" data-lightbox="image-1" > <img ng-src="{{post.images.standard_resolution.url}}" /></a>
 	                    </li>
 	                    <li class="image-info">
 	                        <div class="profile-photo">
-	                        	<a href="" target="_blank"> <img src="" /></a>
+	                        	<a href="" target="_blank"> <img ng-src="{{post.user.profile_picture}}" /></a>
 	                        </div>
 	                        <div class="username">
-	                        	<h1> </h1>
+	                        	<h1> {{post.user.username}} </h1>
 	                          	<div class="likes">
-	                          		<i class="fa fa-comments"></i> <i class="fa fa-heart"></i></p>
+	                          		{{post.comments.count}} <i class="fa fa-comments"></i> {{post.likes.count}}<i class="fa fa-heart"></i></p>
 	                        	</div>
 	                        </div>
 	                    </li>
