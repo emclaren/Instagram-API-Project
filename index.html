@@ -14,7 +14,8 @@
 		<link rel="stylesheet" href="css/main.css">			
 	</head>
 	
-	<body>
+	<body ng-app="project3" ng-controller="Instacontroller" >
+
 		<header>
 			<img src="images/instagrid-logo.svg" alt="Instagrid Logo">
 		</header>
@@ -24,8 +25,8 @@
 			<form action="#" id="search-form">
 				<div class="photo-search">
 					<div class="search-input">
-						<input type="text" name="search_words" id="search-words" placeholder="Enter your search" />
-						 <button type="submit"> <i class="fa fa-search"></i> </button>
+						<input ng-model="hashtag" type="text" name="search_words" id="search-words" placeholder="Enter your search" />
+						 <button type="button" ng-click="getPhotos()"> <i class="fa fa-search"></i> </button>
 					</div>
 				</div>
 			</form>
@@ -38,7 +39,36 @@
 			<img class="searchLogo" src="images/search-tags.svg" alt="Search # tags to view photos">
 			<div class = "page-wrap">
 
-				<ul class="photo-list"></ul>
+				<ul class="photo-list">
+					<li ng-repeat="posts in posts">
+					 <a href="{{posts.images.standard_resolution.url}}" data-lightbox="image-1" > <img src={{posts.images.standard_resolution.url}} />
+</li>
+
+<!--replace all the words value with posts, replace all the javascript from the jquery file, with value data -->
+<!--				//                photoItems += '<li class="photo-container">';
+//                   photoItems += '<ul>';
+//                      photoItems += '<li class="main-image">';
+//                      photoItems += '<a href="' + value.images.standard_resolution.url + '" data-lightbox="image-1" > <img src="' + value.images.standard_resolution.url+ '" /></a>';
+//                      photoItems += '</li>';  
+//                      photoItems += '<li class="image-info">';
+//                      photoItems += '<div class="profile-photo">'; 
+//                      photoItems += '<a href="' + value.link + '"target="_blank"> <img src="' + value.user.profile_picture+ '" /></a>';
+//                      photoItems += '</div>'; 
+//                      photoItems += '<div class="username">'; 
+//                      photoItems += '<h1>' + value.user.username + '</h1>';
+//                      photoItems += '<div class="likes">';
+//                      photoItems += '<i class="fa fa-comments"></i>' + " " +value.comments.count + " "+'<i class="fa fa-heart"></i>' +" " + value.likes.count + '</p>';
+//                      photoItems += '</div>';
+//                      photoItems += '</div>';
+//                      photoItems += '</li>';
+//                   photoItems += '</ul>';
+//                photoItems += '</li>';
+
+-->
+
+
+
+				</ul>
 			</div>
 		</div>
 
@@ -46,7 +76,7 @@
 		<footer>
 			<p> &copy; Copyright 2015 INSTAGRID </p>
 		</footer>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="js/lightbox.min.js"></script>
 		<script src="js/script.js"></script>
