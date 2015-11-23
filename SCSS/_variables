@@ -1,6 +1,7 @@
 $color: #2e2e2e;
 $small-text: 12px;
 $font:'open_sans';
+$base-font: 16px;
 $button-color: #e24420;
 $search-color: #dbdbdb;
 $smallbreakpoint: 600px;

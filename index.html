@@ -2,36 +2,32 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
 		<title>Instagrid</title>
-		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!--Font Awesome for Icons-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<!--Lightbox CSS-->
 		<link href="css/lightbox.css" rel="stylesheet">
 		<!--Instagrid Style Sheet-->
-		<link rel="stylesheet" href="css/main.css">			
+		<link rel="stylesheet" href="css/main.css">	
 	</head>
 	
 	<body ng-app="project3" ng-controller="Instacontroller" >
-
 		<header>
-			<img src="images/instagrid-logo.svg" alt="Instagrid Logo">
-		</header>
-
+			<img src="images/instagrid-logo.svg" class="logo" class="logo" alt="Instagrid Logo">
 		<div class="search-container">
+			
 			<img src="images/instagrid-icon.svg" alt="Camera Logo">
 			<form method="get" ng-submit="getPhotos($event)" action="#" id="search-form">
-				<div class="photo-search">
 					<div class="search-input">
-						<input ng-model="hashtag" type="text" name="search_words" id="search-words" placeholder="Enter your search" />
+						<input ng-model="hashtag" type="text" name="search_words" id="search-words" placeholder="Enter your search..." />
 						 <button type="submit"> <i class="fa fa-search"></i> </button>
 					</div>
 
-				</div>
 			</form>
+
 		</div>
+		</header>
 
 		<div class="results-container">
 
@@ -53,7 +49,7 @@
 	                        <div class="username">
 	                        	<h1> {{post.user.username}} </h1>
 	                          	<div class="likes">
-	                          		{{post.comments.count}} <i class="fa fa-comments"></i> {{post.likes.count}}<i class="fa fa-heart"></i></p>
+	                          		<i class="fa fa-comments"></i> {{post.comments.count}} <i class="fa fa-heart"></i>{{post.likes.count}}</p>
 	                        	</div>
 	                        </div>
 	                    </li>

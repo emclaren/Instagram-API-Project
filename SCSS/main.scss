@@ -3,37 +3,52 @@
 @import "variables";
 @import "mixin";
 
+* {
+	box-sizing: border-box;
+}
 
-body{
-	font-size: $small-text;
+body, html{
+	font-size:$small-text;
+	font-size:1.2rem;
 	color:$color;
 	font-family: $font;
 }
 
+.container{
+	max-width: 1000px;
+}
+
+h1{
+	font-size: .8rem;
+	margin-bottom: 0;
+}
 /*Formatting for the upper logo*/
-header{
-	width:25%;
-	padding:1%;
+.logo{
+	max-width: 150px;
+	margin: 1rem auto;
+	display:block;
 }
 
 /*Formatting for the Search portion of the page*/
 
 .search-container{
-		background-image:url("../images/pattern.png");
-		background-size: cover;
-		text-align: center;
+	background-image:url("../images/pattern.png");
+	text-align: center;
+	padding:3rem;
+	img{
+		width:150px;
+		margin: auto;
 
+		@include bp(tablet) {
+			padding-top:5%;
+			padding-bottom: 2%;
+		}
+	}
 }
 
-.search-container img{
-	width:15%;
-	margin: auto;
-	padding-top:10%;
-	padding-bottom: 5%;
-	@include bp(tablet) {
-		padding-top:5%;
-		padding-bottom: 2%;
-	}
+
+form{
+	margin-top: 3rem;
 }
 
 .search-input{
@@ -42,28 +57,61 @@ header{
 	display: inline-block;
 	margin:0%;
 	border: none;
- 	outline: none;
- 	margin-bottom:10%;
- 	@include bp(tablet) {
+	outline: none;
+	@include bp(tablet) {
 		margin-bottom: 5%;
 	}
- }
+}
 
-button{
-	background-color: white;
-	display: inline-block;
-	border: none;
-	outline: none;
-	color: $search-color;
+input{
+	
+	font-family: 'Open Sans',serif;
+	padding: .33333rem 2.5rem .33333rem 1rem;
+    font-size:.8rem;
+    font-family: $font;
+    border: 1px solid #dbdbdb;
+}
+// button{
+// 	background-color: white;
+// 	display: inline-block;
+// 	border: none;
+// 	outline: none;
+// 	color: $search-color;
+// }
+
+#search-words{
+	border:none;
 }
 
 
+button {
+	border: 0;
+	background-color:white;
+	cursor: pointer;
+	font-family: FontAwesome;
+	font-size: 10px;
+	font-size: 1rem;
+	line-height: 1;
+	padding: 0 .33333rem 0 0;
+	right: .5rem;
+	top: .33333rem;
+	color: #c2c2c2;
+	font-weight: bold;
+}
+
+button:focus {
+  outline: none;
+}
 /*Formatting for the Results section of the page*/
 
 .results-container{
-	width: 97%;
-	margin: 1%;
-	border: 1px solid #c2c2c2;
+	margin: 3rem .5rem;
+	text-align: center;
+	border: 2px solid #c2c2c2;
+	@include bp(desktop) {
+		margin: 3rem auto;
+		max-width:1000px;
+	}	
 }
 
 .loading-gif{
@@ -83,14 +131,14 @@ ul{
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
-  		justify-content: space-around;
+		justify-content: space-around;
 	}
 }
 
 
 .photo-container{
 	border:1px solid $search-color;
-  	padding-top: 0%;
+	padding-top: 0%;
 	margin: 2%;
 	@include bp(tablet) {
 		width:250px;
@@ -102,12 +150,14 @@ ul{
 
 
 .main-image img{ 
-width:100%;
+	width:100%;
+	border-bottom:1px solid #dbdbdb;
 }
 
 .image-info{
 	display:flex;
-  justify-content:space-between;
+	justify-content:space-between;
+	padding: .5rem;
 }
 
 .image-info img{
@@ -120,7 +170,7 @@ width:100%;
 	height: 50px;
 	background-size:cover;
 	overflow:hidden;
-	margin:1rem;
+	margin:0;
 	text-align: left;
 	@include bp(tablet) {
 		width:45px;
@@ -133,12 +183,12 @@ width:100%;
 }
 
 .username{
-  display:flex;
-  flex-direction:column;
-  justify-content:right;
-  text-align:right;
-  padding-right:1rem;
-   overflow:hidden;
+	display:flex;
+	flex-direction:column;
+	justify-content:right;
+	text-align:right;
+
+	overflow:hidden;
 
 
 }
@@ -151,9 +201,10 @@ h1{
 } 
 
 .likes {
-flex-direction:row;
+	flex-direction:row;
+	font-size: 6px;
+	font-size: .6rem;
 }
-
 
 
 
@@ -182,6 +233,9 @@ flex-direction:row;
 
 footer{
 	text-align: center;
-	border-top: 1px solid $color;
-	margin-top: 20%
+	margin:.5rem;
+	border-top: 1px solid #dbdbdb;
+	color:#8c8c8c;
+	font-size:.65rem
 }
+
