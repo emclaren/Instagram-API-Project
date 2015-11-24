@@ -1,14 +1,19 @@
+
 {
   "name": "instagrid",
   "version": "1.0.0",
-  "description": "",
+  "description": "Instagrid created as the third project for the Web Development program at RED Academy in Vancouver.",
   "main": "gulpfile.js",
   "dependencies": {
     "browser-sync": "^2.9.10",
     "gulp-autoprefixer": "^3.0.2",
-    "gulp-sass": "^2.0.4"
+    "gulp-sass": "^2.0.4",
+   "gulp-autoprefixer": "^3.1.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-uglify": "^1.5.1"
   },
-  "devDependencies": {},
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,3 +28,4 @@
   },
   "homepage": "https://github.com/emclaren/project3#readme"
 }
+

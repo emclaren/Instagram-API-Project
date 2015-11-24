@@ -1,5 +1,6 @@
 @import"reset";
 @import "fonts";
+@import"lightbox";
 @import "variables";
 @import "mixin";
 
@@ -11,12 +12,13 @@ body, html{
 	font-size:$small-text;
 	font-size:1.2rem;
 	color:$color;
-	font-family: $font;
+	font-family:$font;
 }
 
 .container{
 	max-width: 1000px;
 }
+
 
 h1{
 	font-size: .8rem;
@@ -32,7 +34,7 @@ h1{
 /*Formatting for the Search portion of the page*/
 
 .search-container{
-	background-image:url("../images/pattern.png");
+	background-image:url("../../images/pattern.png");
 	text-align: center;
 	padding:3rem;
 	img{
@@ -67,17 +69,14 @@ input{
 	
 	font-family: 'Open Sans',serif;
 	padding: .33333rem 2.5rem .33333rem 1rem;
-    font-size:.8rem;
-    font-family: $font;
-    border: 1px solid #dbdbdb;
+	font-size:.8rem;
+	font-family: $font;
+	border: 1px solid #dbdbdb;
 }
-// button{
-// 	background-color: white;
-// 	display: inline-block;
-// 	border: none;
-// 	outline: none;
-// 	color: $search-color;
-// }
+
+input:focus{
+	outline: 0;
+}
 
 #search-words{
 	border:none;
@@ -100,7 +99,7 @@ button {
 }
 
 button:focus {
-  outline: none;
+	outline: none;
 }
 /*Formatting for the Results section of the page*/
 
@@ -192,6 +191,7 @@ ul{
 
 
 }
+
 h1{
 
 
@@ -207,28 +207,6 @@ h1{
 }
 
 
-
-
-// .loadmore {
-// 	padding:0%;
-// 	padding:10px;
-// 	margin:auto;
-// 	text-align: center;
-// 	margin-bottom:5%; 
-//     margin-top: 5%;
-// }
-
-// .button {
-// 	background-color:red;
-// 	width:200px;
-//     height:auto;
-//     margin:auto;
-// 	border:1px solid $color;
-// 	margin-bottom: 5%;
-//     color: white;
-//     text-align: center;
-//     font-weight:bold;
-// }
 /*Formatting for the Footer of the page*/
 
 footer{
