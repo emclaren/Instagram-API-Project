@@ -30,8 +30,19 @@ h1{
 		margin-right: 0;
 		max-width: 200px
 	}
+	@include bp(desktop) {
+		margin-left: 1rem;
+		margin-right: 0;
+		max-width: 250px
+	}
 }
 
+.logo-container{
+	@include bp(desktop) {
+		max-width: 1000px;
+		margin:auto
+	}
+}
 /*Formatting for the Search portion of the page*/
 
 .search-container{

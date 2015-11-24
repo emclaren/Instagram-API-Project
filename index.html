@@ -12,8 +12,9 @@
 
 <body ng-app="project3" ng-controller="Instacontroller" >
 	<header>
-
-		<img src="images/instagrid-logo.svg" class="logo" alt="Instagrid Logo">
+		<div class="logo-container">
+			<img src="images/instagrid-logo.svg" class="logo" alt="Instagrid Logo">
+		</div>
 		<div class="search-container">
 			<img src="images/instagrid-icon.svg" alt="Camera Logo">
 			<form method="get" ng-submit="getPhotos($event)" action="#" id="search-form">

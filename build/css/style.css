@@ -570,6 +570,16 @@ h1 {
       margin-left: 1rem;
       margin-right: 0;
       max-width: 200px; } }
+  @media (min-width: 1000px) {
+    .logo {
+      margin-left: 1rem;
+      margin-right: 0;
+      max-width: 250px; } }
+
+@media (min-width: 1000px) {
+  .logo-container {
+    max-width: 1000px;
+    margin: auto; } }
 
 /*Formatting for the Search portion of the page*/
 .search-container {
