@@ -579,6 +579,9 @@ h1 {
   .search-container img {
     width: 150px;
     margin: auto; }
+  @media (min-width: 1000px) {
+    .search-container {
+      background-size: cover; } }
 
 form {
   margin-top: 3rem; }

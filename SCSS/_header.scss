@@ -42,6 +42,9 @@ h1{
 		width:150px;
 		margin: auto;
 	}
+	@include bp(desktop) {
+		 background-size: cover;
+	}
 }
 
 
