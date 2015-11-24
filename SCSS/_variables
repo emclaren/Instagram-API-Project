@@ -4,6 +4,6 @@ $font:'open_sans';
 $base-font: 16px;
 $button-color: #e24420;
 $search-color: #dbdbdb;
-$smallbreakpoint: 600px;
+$smallbreakpoint: 500px;
 $largebreakpoint: 1000px;
 
