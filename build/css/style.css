@@ -673,7 +673,7 @@ ul {
       max-width: 45%; } }
   @media (min-width: 1000px) {
     .photo-container {
-      max-width: 21%; } }
+      max-width: 30%; } }
 
 .main-image img {
   width: 100%;
@@ -703,7 +703,7 @@ ul {
     .profile-photo {
       width: 45px;
       height: 45px;
-      margin-right: 2rem; } }
+      margin-right: 1rem; } }
   @media (min-width: 1000px) {
     .profile-photo {
       width: 40px;
@@ -724,7 +724,8 @@ ul {
 
 @media (min-width: 1000px) {
   h1 {
-    font-size: 1rem; } }
+    font-size: 1rem;
+    margin-top: 0; } }
 
 .likes {
   -webkit-flex-direction: row;
