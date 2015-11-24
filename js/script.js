@@ -13,7 +13,7 @@
       $http.jsonp(searchInput).then(function(response){
         $scope.posts = response.data.data;
         $scope.loading=false;
-        console.log('hello! work! PLEASE pleaes! test ')
+    
       });
     };
   }]);
