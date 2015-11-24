@@ -639,8 +639,7 @@ a {
       max-width: 1000px; } }
 
 .loading-gif {
-  text-align: center;
-  display: none; }
+  text-align: center; }
 
 ul {
   list-style: none;

@@ -1,9 +1,9 @@
 (function(){
 
   var app = angular.module("project3", [ ]);
-  
-  app.controller("Instacontroller", ['$scope', '$http', function($scope, $http){
    
+  app.controller("Instacontroller", ['$scope', '$http', function($scope, $http){
+
     $scope.loading = false;
     $scope.posts = [];
     $scope.getPhotos = function(e){
